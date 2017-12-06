@@ -50,7 +50,6 @@
         <item name="android:taskToBackEnterAnimation">@null</item>
         <item name="android:taskToBackExitAnimation">@null</item>
     </style>
-
     <style name="edit_text_input">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/edit_height</item>
@@ -62,7 +61,6 @@
         <item name="android:singleLine">true</item>
         <item name="android:textColorHint">?attr/list_secondary_color</item>
         <item name="android:textColor">?attr/list_primary_color</item>
-
     </style>
 
     <style name="toolbar_action_text" parent="@android:style/Theme.Holo.Light">
@@ -127,9 +125,9 @@
         <item name="android:background">@color/list_line_color</item>
     </style>
     <style name="dialog_style" parent="android:Animation">
-        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
         //进入时的动画
-        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
         //退出时的动画
     </style>
 

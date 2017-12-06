@@ -27,7 +27,6 @@ import com.tuya.smart.android.demo.widget.circleprogress.CircleProgressView;
 import com.tuya.smart.sdk.TuyaSdk;
 import com.wnafee.vector.compat.VectorDrawable;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ECBindActivity extends BaseActivity implements IECBindView {
@@ -56,7 +55,7 @@ public class ECBindActivity extends BaseActivity implements IECBindView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ec_bind1);
-        ButterKnife.bind(this);
+
         initView();
         initToolbar();
         initMenu();
@@ -279,7 +278,6 @@ public class ECBindActivity extends BaseActivity implements IECBindView {
 
     @Override
     protected void onDestroy() {
-        ButterKnife.unbind(this);
         mECBindPresenter.onDestroy();
         unRegisterWifiReceiver();
         super.onDestroy();

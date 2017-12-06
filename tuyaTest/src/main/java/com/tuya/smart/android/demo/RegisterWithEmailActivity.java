@@ -5,12 +5,11 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.user.api.IRegisterCallback;
 import com.tuya.smart.android.user.bean.User;
 import com.tuya.smart.sdk.TuyaUser;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -18,9 +17,9 @@ import butterknife.OnClick;
  * Created by letian on 16/2/17.
  */
 public class RegisterWithEmailActivity extends Activity {
-    @Bind(R.id.et_email)
+    @BindView(R.id.et_email)
     EditText mEtEmail;
-    @Bind(R.id.et_password_code)
+    @BindView(R.id.et_password_code)
     EditText mEtPasswordCode;
 
     @Override

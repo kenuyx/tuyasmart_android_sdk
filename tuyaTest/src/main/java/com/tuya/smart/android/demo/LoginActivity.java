@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.alibaba.fastjson.JSONObject;
 import com.tuya.smart.android.common.utils.Base64;
 import com.tuya.smart.android.common.utils.HexUtil;
 import com.tuya.smart.android.common.utils.L;
@@ -22,9 +21,7 @@ import com.tuya.smart.sdk.TuyaSdk;
 import com.tuya.smart.sdk.TuyaUser;
 import com.tuya.smart.sdk.api.INeedLoginListener;
 
-import java.util.HashMap;
-
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -33,31 +30,31 @@ import butterknife.OnClick;
  */
 public class LoginActivity extends Activity {
     private static final String TAG = "LoginActivityggg";
-    @Bind(R.id.et_phone_number)
+    @BindView(R.id.et_phone_number)
     EditText mEtPhoneNumber;
-    @Bind(R.id.et_validate_code)
+    @BindView(R.id.et_validate_code)
     EditText mEtValidateCode;
-    @Bind(R.id.do_get_validate_code)
+    @BindView(R.id.do_get_validate_code)
     Button mDoGetValidateCode;
-    @Bind(R.id.do_reset)
+    @BindView(R.id.do_reset)
     Button mDoLogin;
-    @Bind(R.id.do_register)
+    @BindView(R.id.do_register)
     Button mDoRegister;
-    @Bind(R.id.do_email_register)
+    @BindView(R.id.do_email_register)
     Button mDoEmailRegister;
-    @Bind(R.id.do_uid_register)
+    @BindView(R.id.do_uid_register)
     Button mDoUidRegister;
-    @Bind(R.id.do_phone_login)
+    @BindView(R.id.do_phone_login)
     Button mDoPhoneLogin;
-    @Bind(R.id.do_email_login)
+    @BindView(R.id.do_email_login)
     Button mDoEmailLogin;
-    @Bind(R.id.do_uid_login)
+    @BindView(R.id.do_uid_login)
     Button mDoUidLogin;
-    @Bind(R.id.do_phone_forget)
+    @BindView(R.id.do_phone_forget)
     Button mDoPhoneForget;
-    @Bind(R.id.do_email_forget)
+    @BindView(R.id.do_email_forget)
     Button mDoEmailForget;
-    @Bind(R.id.do_uid_forget)
+    @BindView(R.id.do_uid_forget)
     Button mDoUidForget;
 
     @Override

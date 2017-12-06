@@ -1,22 +1,19 @@
 package com.tuya.smart.android.demo;
 
 import android.app.Activity;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tuya.smart.android.common.utils.L;
 import com.tuya.smart.android.device.TuyaSmartApConnect;
 import com.tuya.smart.android.device.api.response.GwDevResp;
 import com.tuya.smart.android.device.link.APConfigBuilder;
 import com.tuya.smart.android.device.link.IApConnectListener;
-import com.tuya.smart.android.device.link.IPreparedListener;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -25,13 +22,13 @@ import butterknife.ButterKnife;
 public class APActivityTest extends Activity {
     private static final String TAG = "ApConfigggg";
     TuyaSmartApConnect tuyaSmartApConnect;
-    @Bind(R.id.et_ssid)
+    @BindView(R.id.et_ssid)
     EditText mEtSsid;
-    @Bind(R.id.et_password)
+    @BindView(R.id.et_password)
     EditText mEtPassword;
-    @Bind(R.id.btn_config_now)
+    @BindView(R.id.btn_config_now)
     Button mBtnConfigNow;
-    @Bind(R.id.ap_config_text)
+    @BindView(R.id.ap_config_text)
     TextView mApConfigText;
 
     StringBuilder mConfigText = new StringBuilder();

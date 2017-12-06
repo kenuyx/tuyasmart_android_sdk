@@ -39,7 +39,7 @@ import com.tuya.smart.sdk.enums.FirmwareUpgradeEnum;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -52,25 +52,25 @@ public class DevicePanelActivity extends Activity {
     private TuyaTimerManager mTuyaTimerManager;
 
 
-    @Bind(R.id.device_status)
+    @BindView(R.id.device_status)
     TextView mDeviceStatus;
-    @Bind(R.id.check_updage)
+    @BindView(R.id.check_updage)
     Button mCheckUpdage;
-    @Bind(R.id.update_start)
+    @BindView(R.id.update_start)
     Button mUpdateStart;
-    @Bind(R.id.update_end)
+    @BindView(R.id.update_end)
     Button mUpdateEnd;
-    @Bind(R.id.update)
+    @BindView(R.id.update)
     LinearLayout mUpdate;
-    @Bind(R.id.command_text)
+    @BindView(R.id.command_text)
     EditText mCommandText;
-    @Bind(R.id.command_submit)
+    @BindView(R.id.command_submit)
     Button mCommandSubmit;
-    @Bind(R.id.command)
+    @BindView(R.id.command)
     LinearLayout mCommand;
-    @Bind(R.id.delete_device)
+    @BindView(R.id.delete_device)
     Button mDeleteDevice;
-    @Bind(R.id.get_history_data)
+    @BindView(R.id.get_history_data)
     Button mGetHistoryData;
     private TuyaDevice mTuyaDevice;
     private TextView mTvInfo;
@@ -95,6 +95,7 @@ public class DevicePanelActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_pannel);
         ButterKnife.bind(this);
+
         mCommandText.setText("{\"1\":\"MjI=\"}");
         mDevId = mGwId = getIntent().getStringExtra("gwId");
 

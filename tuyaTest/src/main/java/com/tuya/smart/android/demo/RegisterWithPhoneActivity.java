@@ -7,13 +7,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.user.api.IRegisterCallback;
 import com.tuya.smart.android.user.api.IValidateCallback;
 import com.tuya.smart.android.user.bean.User;
 import com.tuya.smart.sdk.TuyaUser;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -22,15 +21,15 @@ import butterknife.OnClick;
  */
 public class RegisterWithPhoneActivity extends Activity {
 
-    @Bind(R.id.et_phone_number)
+    @BindView(R.id.et_phone_number)
     EditText mEtPhoneNumber;
-    @Bind(R.id.do_get_validate_code)
+    @BindView(R.id.do_get_validate_code)
     Button mDoGetValidateCode;
-    @Bind(R.id.et_validate_code)
+    @BindView(R.id.et_validate_code)
     EditText mEtValidateCode;
-    @Bind(R.id.do_register)
+    @BindView(R.id.do_register)
     Button mDoRegister;
-    @Bind(R.id.et_password_code)
+    @BindView(R.id.et_password_code)
     EditText mEtPasswordCode;
 
     @Override

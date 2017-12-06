@@ -91,9 +91,8 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void initToolbar() {
         if (mToolBar == null) {
-            mToolBar = (Toolbar) findViewById(R.id.toolbar_top_view);
-            if (mToolBar == null) {
-            } else {
+            mToolBar = findViewById(R.id.toolbar_top_view);
+            if (mToolBar != null) {
                 TypedArray a = obtainStyledAttributes(new int[]{
                         R.attr.status_font_color});
                 int titleColor = a.getInt(0, Color.WHITE);

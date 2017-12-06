@@ -1,6 +1,7 @@
 package com.tuya.smart.android.demo;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 

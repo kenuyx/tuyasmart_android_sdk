@@ -1,6 +1,5 @@
 package com.tuya.smart.android.demo.activity;
 
-import android.animation.ObjectAnimator;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ import android.text.style.ForegroundColorSpan;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.ScrollView;
@@ -32,7 +30,7 @@ import com.tuya.smart.android.device.bean.SchemaBean;
 import java.util.ArrayList;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -42,20 +40,24 @@ import butterknife.OnClick;
 public class CommonDeviceDebugActivity extends BaseActivity implements ICommonDeviceDebugView {
 
     private CommonDebugDeviceAdapter mCommonDebugDeviceAdapter;
-    @Bind(R.id.lv_dp_list)
-    public ListView mDpListView;
     private CommonDeviceDebugPresenter mPresenter;
 
-    @Bind(R.id.test_log)
+    @BindView(R.id.et_device_id)
+    public TextView mDeviceId;
+
+    @BindView(R.id.lv_dp_list)
+    public ListView mDpListView;
+
+    @BindView(R.id.test_log)
     public TextView mLogView;
 
-    @Bind(R.id.test_scroll)
+    @BindView(R.id.test_scroll)
     public ScrollView testScroll;
 
-    @Bind(R.id.v_off_line)
+    @BindView(R.id.v_off_line)
     public View mOffLineView;
 
-    @Bind(R.id.network_tip)
+    @BindView(R.id.network_tip)
     public TextView mOffLineTip;
 
 
@@ -108,7 +110,7 @@ public class CommonDeviceDebugActivity extends BaseActivity implements ICommonDe
 
     private void initTitle() {
         setTitle(mPresenter.getTitle());
-
+        mDeviceId.setText(mPresenter.getDevBean().getDevId());
     }
 
     private void initAdapter() {
@@ -304,6 +306,5 @@ public class CommonDeviceDebugActivity extends BaseActivity implements ICommonDe
     protected void onDestroy() {
         super.onDestroy();
         mPresenter.onDestroy();
-        ButterKnife.unbind(this);
     }
 }

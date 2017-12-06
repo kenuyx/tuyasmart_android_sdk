@@ -1,6 +1,7 @@
 package com.tuya.smart.android.demo.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,7 @@ import java.util.List;
  * Created by letian on 16/7/18.
  */
 public class CommonDeviceAdapter extends BaseAdapter {
+    private static final String TAG = "CommonDeviceAdapter";
     private final List<DeviceBean> mDevs;
     private final LayoutInflater mInflater;
     private Context mContext;
@@ -83,6 +85,7 @@ public class CommonDeviceAdapter extends BaseAdapter {
 
         @Override
         public void initData(DeviceBean deviceBean) {
+            Log.d(TAG, "name: " + deviceBean.getName() + ", id: " + deviceBean.getDevId());
             Picasso.with(TuyaSdk.getApplication()).load(deviceBean.getIconUrl()).into(deviceIcon);
             final int resId;
             if (deviceBean.getIsOnline()) {

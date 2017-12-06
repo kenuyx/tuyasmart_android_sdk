@@ -7,12 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.user.api.IRegisterCallback;
 import com.tuya.smart.android.user.bean.User;
 import com.tuya.smart.sdk.TuyaUser;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -20,11 +19,11 @@ import butterknife.OnClick;
  * Created by letian on 16/4/28.
  */
 public class RegisterWithUIDActivity extends Activity {
-    @Bind(R.id.et_uid)
+    @BindView(R.id.et_uid)
     EditText mEtUid;
-    @Bind(R.id.et_password_code)
+    @BindView(R.id.et_password_code)
     EditText mEtPasswordCode;
-    @Bind(R.id.do_register)
+    @BindView(R.id.do_register)
     Button mDoRegister;
 
     @Override

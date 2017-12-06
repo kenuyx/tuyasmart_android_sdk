@@ -12,10 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.tuya.smart.android.common.utils.L;
-import com.tuya.smart.android.device.TuyaSmartEasyConnect;
 import com.tuya.smart.android.device.api.response.GwDevResp;
-import com.tuya.smart.android.device.config.ConfigDeviceErrorCode;
-import com.tuya.smart.android.device.link.IConnectListener;
 import com.tuya.smart.sdk.TuyaActivator;
 import com.tuya.smart.sdk.api.ITuyaActivator;
 import com.tuya.smart.sdk.api.ITuyaActivatorGetToken;
@@ -23,7 +20,7 @@ import com.tuya.smart.sdk.api.ITuyaSmartActivatorListener;
 import com.tuya.smart.sdk.builder.ActivatorBuilder;
 import com.tuya.smart.sdk.enums.ActivatorModelEnum;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -32,13 +29,13 @@ import butterknife.OnClick;
  */
 public class EZActivityTest extends Activity {
     private static final String TAG = "EZActivityTest ggg";
-    @Bind(R.id.demo_log)
+    @BindView(R.id.demo_log)
     public TextView mDemoLogTextView;
 
-    @Bind(R.id.tv_ssid)
+    @BindView(R.id.tv_ssid)
     public TextView mSSid;
 
-    @Bind(R.id.et_password)
+    @BindView(R.id.et_password)
     public EditText mPassword;
     private ITuyaActivator mITuyaActivator;
 
@@ -47,14 +44,13 @@ public class EZActivityTest extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ez_test);
         ButterKnife.bind(this);
-
     }
 
     public String getSsid() {
         ConnectivityManager connManager = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         if (networkInfo.isConnected()) {
-            final WifiManager wifiManager = (WifiManager) this.getSystemService(Context.WIFI_SERVICE);
+            final WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
             final WifiInfo connectionInfo = wifiManager.getConnectionInfo();
             if (connectionInfo != null) {
                 String ssid = connectionInfo.getSSID();

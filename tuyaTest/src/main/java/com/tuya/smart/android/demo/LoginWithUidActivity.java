@@ -8,12 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.user.api.ILoginCallback;
 import com.tuya.smart.android.user.bean.User;
 import com.tuya.smart.sdk.TuyaUser;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -21,11 +20,11 @@ import butterknife.OnClick;
  * Created by letian on 16/4/28.
  */
 public class LoginWithUidActivity extends Activity {
-    @Bind(R.id.et_uid_number)
+    @BindView(R.id.et_uid_number)
     EditText mEtUidNumber;
-    @Bind(R.id.et_password)
+    @BindView(R.id.et_password)
     EditText mEtPassword;
-    @Bind(R.id.do_login)
+    @BindView(R.id.do_login)
     Button mDoLogin;
 
     @Override

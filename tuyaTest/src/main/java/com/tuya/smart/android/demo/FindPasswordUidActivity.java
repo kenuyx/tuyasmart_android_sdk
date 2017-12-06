@@ -7,11 +7,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.user.api.IResetPasswordCallback;
 import com.tuya.smart.sdk.TuyaUser;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -19,11 +18,11 @@ import butterknife.OnClick;
  * Created by letian on 16/4/28.
  */
 public class FindPasswordUidActivity extends Activity {
-    @Bind(R.id.et_uid_number)
+    @BindView(R.id.et_uid_number)
     EditText mEtUidNumber;
-    @Bind(R.id.et_uid_password)
+    @BindView(R.id.et_uid_password)
     EditText mEtUidPassword;
-    @Bind(R.id.do_reset)
+    @BindView(R.id.do_reset)
     Button mDoReset;
 
     @Override

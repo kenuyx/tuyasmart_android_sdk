@@ -17,11 +17,8 @@ import com.tuya.smart.android.demo.utils.CommonUtil;
 import com.tuya.smart.android.demo.utils.ToastUtil;
 import com.tuya.smart.android.demo.utils.ViewUtils;
 import com.tuya.smart.android.demo.view.ISwitchView;
-import com.tuya.smart.sdk.TuyaTimerManager;
 
-import java.text.BreakIterator;
-
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -31,19 +28,19 @@ import butterknife.OnClick;
 public class SwitchActivity extends BaseActivity implements ISwitchView {
 
     public static final String INTENT_DEVID = "intent_devid";
-    @Bind(R.id.iv_switch)
+    @BindView(R.id.iv_switch)
     public ImageView mSwitchButton;
 
-    @Bind(R.id.rl_switch_bg)
+    @BindView(R.id.rl_switch_bg)
     public View mBgView;
 
-    @Bind(R.id.v_title_down_line)
+    @BindView(R.id.v_title_down_line)
     public View mLine;
 
     private SwitchPresenter mPresenter;
-    @Bind(R.id.v_off_line)
+    @BindView(R.id.v_off_line)
     public View mOffLineView;
-    @Bind(R.id.network_tip)
+    @BindView(R.id.network_tip)
     public TextView mOffLineTip;
 
     @Override
@@ -175,6 +172,5 @@ public class SwitchActivity extends BaseActivity implements ISwitchView {
     protected void onDestroy() {
         super.onDestroy();
         mPresenter.onDestroy();
-        ButterKnife.unbind(this);
     }
 }

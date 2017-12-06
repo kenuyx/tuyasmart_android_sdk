@@ -9,7 +9,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.user.api.IAddShareCallback;
 import com.tuya.smart.android.user.bean.GroupReceivedMemberBean;
 import com.tuya.smart.android.user.bean.PersonBean;
@@ -22,7 +21,7 @@ import com.tuya.smart.sdk.api.share.IRemoveMemberCallback;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -31,16 +30,15 @@ import butterknife.OnClick;
  */
 public class ShareActivity extends Activity {
 
-    @Bind(R.id.tv_add_share)
+    @BindView(R.id.tv_add_share)
     TextView mTvAddShare;
-    @Bind(R.id.tv_get_share)
+    @BindView(R.id.tv_get_share)
     TextView mTvGetShare;
-    @Bind(R.id.tv_add_uid_share)
+    @BindView(R.id.tv_add_uid_share)
     TextView mTvAddUidShare;
-    @Bind(R.id.lv_share_list)
-    ListView mLvShareList;
+    @BindView(R.id.lv_share_list)
+    ListView mShareListView;
     private TuyaMember mTuyaMember;
-    private ListView mShareListView;
     private ShareListAdapter shareListAdapter;
     private Context mActivity;
 
@@ -50,7 +48,7 @@ public class ShareActivity extends Activity {
 
         setContentView(R.layout.activity_share);
         ButterKnife.bind(this);
-        mShareListView = (ListView) findViewById(R.id.lv_share_list);
+
         mTuyaMember = new TuyaMember(this);
         mActivity = this;
 

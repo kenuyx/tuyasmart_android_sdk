@@ -9,7 +9,6 @@ import com.tuya.smart.android.user.api.ILogoutCallback;
 import com.tuya.smart.android.user.api.IReNickNameCallback;
 import com.tuya.smart.sdk.TuyaUser;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends Activity {
@@ -18,7 +17,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+
     }
 
     @Override

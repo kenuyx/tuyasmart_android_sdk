@@ -7,12 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.tuya.smart.android.demo.R;
 import com.tuya.smart.android.user.api.IResetPasswordCallback;
 import com.tuya.smart.android.user.api.IValidateCallback;
 import com.tuya.smart.sdk.TuyaUser;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -21,13 +20,13 @@ import butterknife.OnClick;
  */
 public class FindPasswordPhoneActivity extends Activity {
 
-    @Bind(R.id.et_phone_number)
+    @BindView(R.id.et_phone_number)
     EditText mEtPhoneNumber;
-    @Bind(R.id.et_phone_code)
+    @BindView(R.id.et_phone_code)
     EditText mEtPhoneCode;
-    @Bind(R.id.et_phone_password)
+    @BindView(R.id.et_phone_password)
     EditText mEtPhonePassword;
-    @Bind(R.id.do_reset)
+    @BindView(R.id.do_reset)
     Button mDoLogin;
 
     @Override
@@ -35,7 +34,6 @@ public class FindPasswordPhoneActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_password_phone);
         ButterKnife.bind(this);
-
     }
 
     private String getCountryCode() {
